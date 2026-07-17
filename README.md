@@ -152,5 +152,3 @@ Open the Command Palette (`Ctrl + K`) and type:
 
 ---
 
-## 📄 License
-Licensed under the [MIT License](LICENSE).
