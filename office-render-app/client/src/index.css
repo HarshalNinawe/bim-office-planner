@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blueprint-bg: #0b1d30;
+  --color-blueprint-panel: rgba(15, 42, 68, 0.7);
+  --color-blueprint-grid: rgba(127, 209, 232, 0.06);
+  --color-blueprint-line: #7fd1e8;
+  --color-blueprint-line-dim: #3a6880;
+  --color-blueprint-accent: #f2a65a;
+  --color-blueprint-text: #eaf2f8;
+  --color-blueprint-text-dim: #8fa9c0;
+  --color-blueprint-danger: #f27055;
+  --color-blueprint-success: #4ade80;
+  
+  --font-mono: "Space Mono", "Courier New", monospace;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--color-blueprint-bg);
+  background-image: 
+    repeating-linear-gradient(0deg, var(--color-blueprint-grid) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(90deg, var(--color-blueprint-grid) 0 1px, transparent 1px 20px);
+  color: var(--color-blueprint-text);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Glassmorphism scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 29, 48, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-blueprint-line-dim);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blueprint-line);
+}
+
+/* Selection custom styling */
+::selection {
+  background: var(--color-blueprint-accent);
+  color: #0b1d30;
+}

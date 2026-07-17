@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bim-planner-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: GROQ_API_KEY
+        sync: false
